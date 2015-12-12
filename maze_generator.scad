@@ -67,10 +67,8 @@ module y_line(point, length, thickness = 1) {
 
 // create the outer wall of maze
 module maze_outer_wall(rows, columns, block_width = 5, wall_thickness = 1) {
-    x_line([0, 0], columns * block_width, wall_thickness);
     x_line([0, rows * block_width], columns * block_width, wall_thickness);
     y_line([0, block_width], (rows - 1) * block_width, wall_thickness);
-    y_line([columns * block_width, 0], (rows - 1) * block_width, wall_thickness);
 }
 
 // create the inner wall of maze
@@ -178,7 +176,7 @@ function go_up(i, j, rows, columns, maze_vector) =
     
 function visit(v, maze_vector) =
     replace(v, [v[0], v[1], VISITED(), v[3]], maze_vector);
-
+ 
 function go_left(i, j, rows, columns, maze_vector) =
     go_maze(i - 1, j, rows, columns, delete_right_wall_of(find(i - 1, j, maze_vector), NOT_VISITED(), maze_vector));
     
