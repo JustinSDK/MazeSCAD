@@ -67,10 +67,8 @@ module y_line(point, length, thickness = 1) {
 
 // create the outer wall of maze
 module maze_outer_wall(rows, columns, block_width = 5, wall_thickness = 1) {
-    x_line([0, 0], columns * block_width, wall_thickness);
     x_line([0, rows * block_width], columns * block_width, wall_thickness);
     y_line([0, block_width], (rows - 1) * block_width, wall_thickness);
-    y_line([columns * block_width, 0], (rows - 1) * block_width, wall_thickness);
 }
 
 // create the inner wall of maze
@@ -214,45 +212,55 @@ module maze_cube(blocks, block_width, wall_thickness, wall_height) {
     length = block_width * x_blocks + wall_thickness * 2;
     width = block_width * y_blocks + wall_thickness * 2;
     height = block_width * z_blocks + wall_thickness * 2;
+   
+   
     
-    maze_vector1 = go_maze(1, 1, y_blocks, x_blocks, replace([x_blocks, y_blocks, 0, UP_RIGHT_WALL()], [x_blocks, y_blocks, 0, UP_WALL()], init_maze(y_blocks, x_blocks)));
+   maze_vector1 = go_maze(1, 1, y_blocks, x_blocks, replace([1, 1, 0, UP_RIGHT_WALL()], [1, 1, 0, RIGHT_WALL()],
+        replace([x_blocks, y_blocks, 0, UP_RIGHT_WALL()], [x_blocks, y_blocks, 0, UP_WALL()], init_maze(y_blocks, x_blocks))
+    ));
     
-    maze_vector2 = go_maze(1, 1, y_blocks, x_blocks, replace([x_blocks, y_blocks, 0, UP_RIGHT_WALL()], [x_blocks, y_blocks, 0, UP_WALL()], init_maze(y_blocks, x_blocks)));
+    maze_vector2 = go_maze(1, 1, y_blocks, x_blocks, replace([x_blocks, 1, 0, UP_RIGHT_WALL()], [x_blocks, 1, 0, RIGHT_WALL()], init_maze(y_blocks, x_blocks)));
     
-    maze_vector3 = go_maze(1, 1, z_blocks, x_blocks, replace([x_blocks, z_blocks, 0, UP_RIGHT_WALL()], [x_blocks, z_blocks, 0, UP_WALL()], init_maze(z_blocks, x_blocks)));
+    maze_vector3 = go_maze(1, 1, x_blocks, z_blocks, replace([z_blocks, x_blocks, 0, UP_RIGHT_WALL()], [z_blocks, x_blocks, 0, UP_WALL()], init_maze(x_blocks, z_blocks)));
     
-    maze_vector4 = go_maze(1, 1, z_blocks, x_blocks, replace([x_blocks, z_blocks, 0, UP_RIGHT_WALL()], [x_blocks, z_blocks, 0, UP_WALL()], init_maze(z_blocks, x_blocks)));
+    maze_vector4 = go_maze(1, 1, z_blocks, x_blocks, replace([x_blocks, 1, 0, UP_RIGHT_WALL()], [x_blocks, 1, 0, UP_WALL()], init_maze(z_blocks, x_blocks)));
     
-    maze_vector5 = go_maze(1, 1, y_blocks, z_blocks, replace([z_blocks, y_blocks, 0, UP_RIGHT_WALL()], [z_blocks, y_blocks, 0, UP_WALL()], init_maze(y_blocks, z_blocks)));
+    maze_vector5 = go_maze(1, 1, z_blocks, y_blocks, replace([y_blocks, 1, 0, UP_RIGHT_WALL()], [y_blocks, 1, 0, RIGHT_WALL()], init_maze(z_blocks, y_blocks)));
     
-    maze_vector6 = go_maze(1, 1, y_blocks, z_blocks,  replace([z_blocks, y_blocks, 0, UP_RIGHT_WALL()], [z_blocks, y_blocks, 0, UP_WALL()], init_maze(y_blocks, z_blocks))); 
+    maze_vector6 = go_maze(1, 1, y_blocks, z_blocks,  replace([z_blocks, 1, 0, UP_RIGHT_WALL()], [z_blocks, 1, 0, RIGHT_WALL()], init_maze(y_blocks, z_blocks))); 
     
     
-        cube([length, width, height]);
+    cube([length, width, height]);
         
-        translate([wall_thickness, wall_thickness, -wall_height]) 
-            linear_extrude(wall_height) 
-                maze(y_blocks, x_blocks, maze_vector1, block_width, wall_thickness);
-
-        translate([wall_thickness, wall_thickness, height]) 
-            linear_extrude(wall_height) 
-                maze(y_blocks, x_blocks, maze_vector2, block_width, wall_thickness);
-               
-        translate([wall_thickness, 0, wall_thickness]) 
-            rotate([90, 0, 0]) linear_extrude(wall_height) 
-                maze(z_blocks, x_blocks, maze_vector3, block_width, wall_thickness);
+    // 1
+    translate([wall_thickness, wall_thickness, -wall_height]) 
+        linear_extrude(wall_height) 
+        union() {
+            y_line([0, 0], block_width);
+            maze(y_blocks, x_blocks, maze_vector1, block_width, wall_thickness);
+        }
+                
+    // 5
+    translate([wall_thickness, wall_thickness, height]) 
+         linear_extrude(wall_height) 
+            maze(y_blocks, x_blocks, maze_vector2, block_width, wall_thickness);
+    // 6       
+    translate([length - wall_thickness, -wall_height, height - wall_thickness]) 
+         rotate([90, 90, 180]) linear_extrude(wall_height) 
+            maze(x_blocks, z_blocks, maze_vector3, block_width, wall_thickness);
+    // 3
+    translate([wall_thickness, width, height - wall_thickness]) 
+        rotate([-90, 0, 0]) linear_extrude(wall_height) 
+            maze(z_blocks, x_blocks, maze_vector4, block_width, wall_thickness);     
+    // 4
+    translate([-wall_height, width - wall_thickness, height - wall_thickness]) 
+         rotate([90, 180, 90])linear_extrude(wall_height) 
+            maze(z_blocks, y_blocks, maze_vector5, block_width, wall_thickness);
         
-        translate([wall_thickness, width + wall_height, wall_thickness]) 
-            rotate([90, 0, 0]) linear_extrude(wall_height) 
-                maze(z_blocks, x_blocks, maze_vector4, block_width, wall_thickness);     
-
-        translate([0, wall_thickness, wall_thickness]) 
-            rotate([0, -90, 0]) linear_extrude(wall_height) 
-                maze(y_blocks, z_blocks, maze_vector5, block_width, wall_thickness);
-
-        translate([length + wall_height, wall_thickness, wall_thickness]) 
-            rotate([0, -90, 0]) linear_extrude(wall_height) 
-                maze(y_blocks, z_blocks, maze_vector6, block_width, wall_thickness);
+    // 2
+    translate([length, width - wall_thickness, wall_thickness]) 
+         rotate([0, -90, 180]) linear_extrude(wall_height) 
+            maze(y_blocks, z_blocks, maze_vector6, block_width, wall_thickness);
     
 }
     
