@@ -1,6 +1,6 @@
-x_blocks = 10; 
-y_blocks = 10;
-z_blocks = 10;
+x_blocks = 15; 
+y_blocks = 5;
+z_blocks = 5;
 wall_thickness = 1;
 wall_height = 2;
 block_width = 3;
