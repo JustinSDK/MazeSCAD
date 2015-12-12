@@ -244,7 +244,7 @@ module maze_cube(blocks, block_width, wall_thickness, wall_height) {
         
         translate([wall_thickness, width + wall_height, wall_thickness]) 
             rotate([90, 0, 0]) linear_extrude(wall_height) 
-                maze(z_blocks, x_blocks, maze_vector3, block_width, wall_thickness);     
+                maze(z_blocks, x_blocks, maze_vector4, block_width, wall_thickness);     
 
         translate([0, wall_thickness, wall_thickness]) 
             rotate([0, -90, 0]) linear_extrude(wall_height) 
@@ -252,7 +252,7 @@ module maze_cube(blocks, block_width, wall_thickness, wall_height) {
 
         translate([length + wall_height, wall_thickness, wall_thickness]) 
             rotate([0, -90, 0]) linear_extrude(wall_height) 
-                maze(y_blocks, z_blocks, maze_vector5, block_width, wall_thickness);
+                maze(y_blocks, z_blocks, maze_vector6, block_width, wall_thickness);
     
 }
     
