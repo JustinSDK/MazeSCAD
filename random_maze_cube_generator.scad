@@ -1,9 +1,10 @@
-x_blocks = 15; 
-y_blocks = 5;
-z_blocks = 5;
+x_blocks = 10; 
+y_blocks = 10;
+z_blocks = 10;
 wall_thickness = 1;
 wall_height = 2;
 block_width = 3;
+edge_enabled = "YES";
 
 /*
  * constants, for clearness
@@ -261,7 +262,51 @@ module maze_cube(blocks, block_width, wall_thickness, wall_height) {
     translate([length, width - wall_thickness, wall_thickness]) 
          rotate([0, -90, 180]) linear_extrude(wall_height) 
             maze(y_blocks, z_blocks, maze_vector6, block_width, wall_thickness);
-    
+
+            
+    if(edge_enabled == "YES") {
+        edge_square_width = 1.5 * wall_thickness + wall_height;
+                
+        translate([wall_thickness / 2 + block_width, -wall_height, -wall_height]) 
+            cube([length - block_width - wall_thickness , edge_square_width, edge_square_width]);
+            
+        translate([0, width - 1.5 * wall_thickness, -wall_height]) 
+            cube([length + wall_height, edge_square_width, edge_square_width]);        
+            
+        translate([-block_width + wall_thickness, -wall_height, -wall_height]) 
+            cube([edge_square_width, width + wall_thickness + 1.5 * wall_height, edge_square_width]);
+            
+        translate([-block_width + 1.5 * wall_thickness + length, -wall_height, -wall_height]) 
+            cube([edge_square_width, width - block_width / 2, edge_square_width]);        
+            
+        // 
+        
+        translate([-wall_height, -wall_height, height - 1.5 * wall_thickness]) 
+            cube([length - 1.5 * wall_thickness , edge_square_width, edge_square_width]); 
+            
+        translate([-wall_height, width - 1.5 * wall_thickness, height - 1.5 * wall_thickness]) 
+            cube([length + wall_height - wall_thickness / 2, edge_square_width, edge_square_width]);  
+
+        translate([-block_width + wall_thickness, wall_thickness / 2 + block_width, height - 1.5 * wall_thickness]) 
+            cube([edge_square_width, width - wall_height, edge_square_width]); 
+
+        translate([-block_width + 1.5 * wall_thickness + length, -wall_height,  height - 1.5 * wall_thickness]) 
+            cube([edge_square_width, width + block_width + wall_thickness, edge_square_width]);      
+            
+        //
+        
+        translate([-wall_height, -wall_height, 0])
+            cube([edge_square_width, edge_square_width, height]);          
+            
+        translate([length - 1.5* wall_thickness, -wall_height, 0])
+            cube([edge_square_width, edge_square_width, height]);           
+            
+        translate([-wall_height, width - 1.5 * wall_thickness, 0])
+            cube([edge_square_width, edge_square_width, height - block_width - wall_thickness / 2]);
+
+        translate([-wall_height + length + wall_thickness / 2, width - 1.5 * wall_thickness, 0])
+            cube([edge_square_width, edge_square_width, height - block_width - wall_thickness / 2]);        
+    }        
 }
     
 /*
