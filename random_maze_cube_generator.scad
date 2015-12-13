@@ -3,7 +3,7 @@ y_blocks = 10;
 z_blocks = 10;
 wall_thickness = 1;
 wall_height = 2;
-block_width = 3;
+block_width = 5;
 edge_enabled = "YES";
 
 /*
@@ -268,44 +268,48 @@ module maze_cube(blocks, block_width, wall_thickness, wall_height) {
         edge_square_width = 1.5 * wall_thickness + wall_height;
                 
         translate([wall_thickness / 2 + block_width, -wall_height, -wall_height]) 
-            cube([length - block_width - wall_thickness , edge_square_width, edge_square_width]);
-            
+            cube([block_width * (x_blocks - 1) + 1.5 * wall_thickness + wall_height, edge_square_width, edge_square_width]);
+         
         translate([0, width - 1.5 * wall_thickness, -wall_height]) 
             cube([length + wall_height, edge_square_width, edge_square_width]);        
-            
-        translate([-block_width + wall_thickness, -wall_height, -wall_height]) 
-            cube([edge_square_width, width + wall_thickness + 1.5 * wall_height, edge_square_width]);
-            
-        translate([-block_width + 1.5 * wall_thickness + length, -wall_height, -wall_height]) 
-            cube([edge_square_width, width - block_width / 2, edge_square_width]);        
+
+        translate([-wall_height , -wall_height, -wall_height]) 
+            cube([edge_square_width, y_blocks * block_width + wall_height * 2 + wall_thickness * 2, edge_square_width]);
+
+        translate([x_blocks * block_width + wall_thickness / 2, -wall_height, -wall_height]) 
+            cube([edge_square_width, (y_blocks - 1) * block_width + wall_height + wall_thickness * 1.5, edge_square_width]);        
             
         // 
-        
-        translate([-wall_height, -wall_height, height - 1.5 * wall_thickness]) 
-            cube([length - 1.5 * wall_thickness , edge_square_width, edge_square_width]); 
+  
+        translate([-wall_height, -wall_height, height - edge_square_width + wall_height]) 
+            cube([block_width * (x_blocks - 1) + 1.5 * wall_thickness + wall_height, edge_square_width, edge_square_width]);
             
-        translate([-wall_height, width - 1.5 * wall_thickness, height - 1.5 * wall_thickness]) 
-            cube([length + wall_height - wall_thickness / 2, edge_square_width, edge_square_width]);  
-
-        translate([-block_width + wall_thickness, wall_thickness / 2 + block_width, height - 1.5 * wall_thickness]) 
-            cube([edge_square_width, width - wall_height, edge_square_width]); 
-
-        translate([-block_width + 1.5 * wall_thickness + length, -wall_height,  height - 1.5 * wall_thickness]) 
-            cube([edge_square_width, width + block_width + wall_thickness, edge_square_width]);      
+          
+        translate([-wall_height, width - 1.5 * wall_thickness, height - edge_square_width + wall_height]) 
+            cube([length + wall_height - wall_thickness / 2, edge_square_width, edge_square_width]);        
             
+        translate([-wall_height , block_width + wall_thickness / 2, height - edge_square_width + wall_height]) 
+            cube([edge_square_width, (y_blocks - 1) * block_width , edge_square_width]);
+            
+
+        translate([x_blocks * block_width + wall_thickness / 2, -wall_height, height - edge_square_width + wall_height]) 
+            cube([edge_square_width, y_blocks * block_width + wall_height * 2 + wall_thickness * 2, edge_square_width]);     
+
         //
+
         
         translate([-wall_height, -wall_height, 0])
             cube([edge_square_width, edge_square_width, height]);          
-            
+  
         translate([length - 1.5* wall_thickness, -wall_height, 0])
             cube([edge_square_width, edge_square_width, height]);           
             
+                
         translate([-wall_height, width - 1.5 * wall_thickness, 0])
             cube([edge_square_width, edge_square_width, height - block_width - wall_thickness / 2]);
 
-        translate([-wall_height + length + wall_thickness / 2, width - 1.5 * wall_thickness, 0])
-            cube([edge_square_width, edge_square_width, height - block_width - wall_thickness / 2]);        
+        translate([length - 1.5 * wall_thickness, width - 1.5 * wall_thickness, 0])
+            cube([edge_square_width, edge_square_width, height - block_width - wall_thickness / 2]);     
     }        
 }
     
