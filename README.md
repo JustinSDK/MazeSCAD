@@ -1,43 +1,22 @@
 OpenSCAD random maze generator
 ------------------------------
 
-# maze_generator.scad
+- [maze_generator](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/maze_generator.md)
 
 ![Random Maze Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/f2/c4/6e/ce/f5/12316500_10153120090346831_3688134571816621464_n_preview_featured.jpg)
 
-This is a random maze generator, implemented by pure OpenSCAD. You may change the following parameters to generate a maze, different every time:
+- [random\\_maze\\_cube_generator.scad](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/maze_cube_generator.md)
 
-- rows
-- columns
-- wall_thickness
-- wall_height
-- block_width
+![Random Maze Cube Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/24/b6/0c/40/13/random_maze_cube_generator_2_preview_featured.jpg)
 
-Give it a try: [http://www.thingiverse.com/apps/customizer/run?thing_id=1185425](http://www.thingiverse.com/apps/customizer/run?thing_id=1185425)
+- [random\\_maze\\_cylinder_generator](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/random_maze_cylinder_generator.md)
 
+![Random Maze Cylinder Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/1a/8f/25/f3/01/maze_cylinder_1_preview_featured.JPG)
 
-# random\_maze\_cube_generator.scad
+- [random\\_maze\\_container_generator](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/random_maze_container_generator.md)
 
-![Random Maze Cube Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/0a/d4/e7/19/8c/random_maze_cube_generator_preview_featured.jpg)
+![Random Maze Container Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/a0/ee/c5/e2/cc/7f2e204c4a3f6e92d24e831b2f8fbc72_preview_featured.jpg)
 
-This thing is based on [Random maze generator, pure OpenSCAD](https://www.thingiverse.com/thing:1185425). You may change the following parameters to generate a maze cube. Each side has a different maze every time.
+- [random\\_maze\\_ring_generator](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/random_maze_ring_generator.md)
 
-- `x_blocks`
-- `y_blocks`
-- `z_blocks`
-- `wall_thickness`
-- `wall_height`
-- `block_width`
-- `edge_enabled` : "YES" for enabled
-
-A cube without edges:
-
-![A cube without edges](http://thingiverse-production-new.s3.amazonaws.com/renders/4e/d5/95/35/e6/random_maze_cube_generator_without_edges_preview_featured.JPG)
-
-A cube with edges:
-
-![A cube with edges](http://thingiverse-production-new.s3.amazonaws.com/renders/92/44/f4/e9/06/random_maze_cube_generator_with_edges_preview_featured.JPG)
-
- 
-Give it a try:
-http://www.thingiverse.com/apps/customizer/run?thing_id=1191166
+![Random Maze Ring Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/18/d4/f2/47/52/10357262_10153398970878869_4118076036927371775_n_preview_featured.jpg)
