@@ -21,7 +21,7 @@ module a_quarter_arc(radius, angle, width = 1) {
     intersection() {
         difference() {
             offset(r = width) circle(radius, $fn=96); 
-            circle(radius, $fn=48);
+            circle(radius, $fn=96);
         }
         polygon([[0, 0], [outer, 0], [outer, outer * sin(angle)], [outer * cos(angle), outer * sin(angle)]]);
     }
