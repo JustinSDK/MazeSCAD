@@ -1,4 +1,4 @@
-[](https://www.youtube.com/watch?v=h_q17ymEgf4)
+# random_maze_sphere_generator.scad
 
 This is based on [Random maze cylinder generator](https://www.thingiverse.com/thing:1229429). It's easy to print. You may change the following parameters to generate a maze sphere, a different maze every time.
 

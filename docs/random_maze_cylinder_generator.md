@@ -1,4 +1,4 @@
-# random\_maze\_cylinder_generator.scad
+# random_maze_cylinder_generator.scad
 
 This thing is based on [Random maze generator, pure OpenSCAD](https://www.thingiverse.com/thing:1185425). You may use this as a base for creating a random maze pen holder (may be found in [Random maze container generator](http://www.thingiverse.com/thing:1229469)):
 ![maze pen holder](http://thingiverse-production-new.s3.amazonaws.com/renders/50/9c/72/af/a2/7f2e204c4a3f6e92d24e831b2f8fbc72_preview_featured.jpg)

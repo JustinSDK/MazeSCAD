@@ -1,4 +1,4 @@
-# maze_generator.scad
+# random_maze_generator.scad
 
 ![Random Maze Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/f2/c4/6e/ce/f5/12316500_10153120090346831_3688134571816621464_n_preview_featured.jpg)
 
