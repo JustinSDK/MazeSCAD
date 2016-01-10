@@ -1,11 +1,11 @@
 OpenSCAD random maze generator
 ------------------------------
 
-- [maze_generator](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/maze_generator.md)
+- [random\_maze_generator](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/random_maze_generator.md)
 
 ![Random Maze Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/f2/c4/6e/ce/f5/12316500_10153120090346831_3688134571816621464_n_preview_featured.jpg)
 
-- [random\_maze\_cube_generator.scad](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/maze_cube_generator.md)
+- [random\_maze\_cube_generator.scad](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/random_maze_cube_generator.md)
 
 ![Random Maze Cube Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/24/b6/0c/40/13/random_maze_cube_generator_2_preview_featured.jpg)
 
