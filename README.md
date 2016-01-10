@@ -25,3 +25,7 @@ OpenSCAD random maze generator
 - [random\_maze\_sphere_generator](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/random_maze_sphere_generator.md)
 
 ![Random Maze Sphere Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/9d/6c/2d/b7/b5/7d69d2210c29f06d4ead4278d1c8d76e_preview_featured.jpg)
+
+- [random\_maze\_circle_generator](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/random_maze_circle_generator.md)
+
+![Random Maze Circle Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/fb/ce/ea/33/c9/ffefaea7573daa979cfd44a6ac2aea69_preview_featured.jpg)

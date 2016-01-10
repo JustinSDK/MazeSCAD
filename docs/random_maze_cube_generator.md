@@ -1,4 +1,4 @@
-# random\_maze\_cube_generator.scad
+# random_maze_cube_generator.scad
 
 ![Random Maze Cube Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/24/b6/0c/40/13/random_maze_cube_generator_2_preview_featured.jpg)
 
