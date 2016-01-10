@@ -1,3 +1,5 @@
+use <2d.scad>;
+use <3d.scad>;
 use <random_maze_generator.scad>;
 use <random_maze_cylinder_generator.scad>;
 
@@ -9,14 +11,6 @@ wall_thickness = 2;
 
 arm_and_base = "YES";
 simple_support_on_the_top = "YES";
-
-
-module hollow_sphere(radius, thickness = 1) {
-    difference() {
-	    sphere(radius + thickness, $fn = 96);
-        sphere(radius, $fn = 96);
-	}
-}
 
 module maze_sphere(radius, vertical_blocks, horizontal_blocks, wall_height = 1, wall_thickness = 1) {
     maze_vector = go_maze(1, 1, vertical_blocks, horizontal_blocks, replace([horizontal_blocks, 1, 0, UP_RIGHT_WALL()], [horizontal_blocks, 1, 0, UP_WALL()], init_maze(vertical_blocks, horizontal_blocks)));

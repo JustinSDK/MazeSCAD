@@ -1,3 +1,5 @@
+use <2d.scad>;
+
 rows = 10; 
 columns = 10; 
 wall_thickness = 2;
@@ -50,20 +52,6 @@ function VISITED() = 1;
  * modules for creating a maze
  *
  */
-
-// give a [x, y] point and length. draw a line in the x direction
-module x_line(point, length, thickness = 1) {
-    offset = thickness / 2;
-    translate([point[0] - offset, point[1] - offset, 0]) 
-        square([length + thickness, thickness]);
-}
-
-// give a [x, y] point and length. draw a line in the y direction
-module y_line(point, length, thickness = 1) {
-    offset = thickness / 2;
-    translate([point[0] - offset, point[1] - offset, 0])  
-        square([thickness, length + thickness]);
-}
 
 // create the outer wall of maze
 module maze_outer_wall(rows, columns, block_width = 5, wall_thickness = 1) {

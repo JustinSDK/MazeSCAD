@@ -1,9 +1,17 @@
 function PI() = 3.14159;
 
+// give a [x, y] point and length. draw a line in the x direction
 module x_line(point, length, thickness = 1) {
     offset = thickness / 2;
     translate([point[0] - offset, point[1] - offset, 0]) 
         square([length + thickness, thickness]);
+}
+
+// give a [x, y] point and length. draw a line in the y direction
+module y_line(point, length, thickness = 1) {
+    offset = thickness / 2;
+    translate([point[0] - offset, point[1] - offset, 0])  
+        square([thickness, length + thickness]);
 }
 
 module a_quarter_arc(radius, angle, width = 1) {

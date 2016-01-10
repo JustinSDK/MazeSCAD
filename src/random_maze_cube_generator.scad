@@ -1,3 +1,4 @@
+use <2d.scad>;
 use <random_maze_generator.scad>;
 
 x_blocks = 10; 
