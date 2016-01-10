@@ -1,4 +1,4 @@
-# random\_maze\_cylinder_generator.scad
+# random_maze_cylinder_generator.scad
 
 This thing is based on [Random maze cylinder generator](http://www.thingiverse.com/thing:1229429).  You may use MakerBot Customizer to generate the container directly if you are not familiar with 3D modeling.
 
