@@ -29,12 +29,12 @@ module mickey_maze(radius, cblocks, rblocks, thickness = 1) {
 	ear_cblocks = 2 * (cblocks - cblocks % 3) / 3;
 	
 	// ear1
-	translate([radius * 1.65, -radius * 0.275, 0])  
+	translate([radius * 1.68, -radius * 0.275, 0])  
 	    rotate([0, 0, 181.5]) 
 		    circle_maze(radius / 1.5, ear_cblocks, rblocks, wall_thickness);
 		
 	// ear2
-	translate([-radius * 0.275, radius * 1.65, 0])  
+	translate([-radius * 0.275, radius * 1.68, 0])  
 		rotate([0, 0, -67])  
 			circle_maze(radius / 1.5, ear_cblocks, rblocks, wall_thickness);		
 }
@@ -47,10 +47,10 @@ module mickey_maze_bottom(radius, cblocks, rblocks, thickness = 1, face_bottom =
 		
 		// ears
 		if(ears_bottom == "YES") {	
-			translate([radius * 1.65, -radius * 0.275, 0])  
+			translate([radius * 1.68, -radius * 0.275, 0])  
 				circle(radius / 1.5 + wall_thickness, $fn = 96);
 							
-			translate([-radius * 0.275, radius * 1.65, 0])  
+			translate([-radius * 0.275, radius * 1.68, 0])  
 				circle(radius / 1.5 + wall_thickness, $fn = 96);									
 		}
 	}

@@ -20,7 +20,7 @@ module circle_maze(radius, cblocks, rblocks, thickness = 1) {
 	
 	// inner circle
 	rotate([0, 0, 180]) 
-	    arc(length_rblock, [0, full_circle_angle - arc_angle * 2], thickness);		
+	    arc(length_rblock, [0, full_circle_angle - arc_angle], thickness);		
 		
 	rotate([0, 0, 315]) 	
 	    x_line([length_rblock + thickness / 2, 0], length_rblock, thickness); 
@@ -42,7 +42,13 @@ module circle_maze(radius, cblocks, rblocks, thickness = 1) {
         if(v == 2 || v == 3) {
 		    rotate([0, 0, cc * arc_angle])
 		        arc(cr * length_rblock, [0, arc_angle], thickness);
-        }
+        } 
+		if(v == 0 || v == 1) {
+		    r1 = length_rblock * 2;
+			r2 = cr * length_rblock;
+		    rotate([0, 0, cc * arc_angle])
+		        arc(cr * length_rblock, [0, arc_angle * (r2 - r1) / r2], thickness);
+		}
     }  	
 }
 
