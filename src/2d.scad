@@ -45,3 +45,19 @@ module arc(radius, angles, width = 1) {
        }
 }
 
+
+
+
+// create a equilateral triangle
+module equilateral_triangle(side_length, center = false) {
+    radius = 0.57735026918962576450914878050196 * side_length;
+	circle(r = radius, center = center, $fn = 3); 
+}
+
+// create a holly equilateral triangle
+module holly_equilateral_triangle(side_length, thickness = 1, center = true) {
+    difference() {
+	    offset(delta = thickness) equilateral_triangle(side_length, center = center);
+	    equilateral_triangle(side_length, center = center);
+    }
+}
