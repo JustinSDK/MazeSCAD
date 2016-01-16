@@ -1,6 +1,6 @@
 # random_maze_pyramid_generator_easy_style
 
-This is based on [Random maze generator, pure OpenSCAD](). You may change the following parameters to generate a maze  pyramid, different every time:
+This is based on [Random maze generator, pure OpenSCAD](https://www.thingiverse.com/thing:1185425). You may change the following parameters to generate a maze pyramid, different every time:
 
 - `square_block`
 - `wall_thickness`
