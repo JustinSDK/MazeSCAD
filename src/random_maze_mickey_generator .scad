@@ -7,7 +7,7 @@ radius = 20;
 wall_height = 2;
 wall_thickness = 1; 
 
-cblocks = 25; 
+cblocks = 15; 
 rblocks = 5;
 
 face_bottom = "YES";
@@ -56,7 +56,12 @@ module mickey_maze_bottom(radius, cblocks, rblocks, thickness = 1, face_bottom =
 	}
 }
 
-mickey_maze_bottom(radius, cblocks, rblocks, wall_thickness, face_bottom, ears_bottom);
+if(face_bottom == "YES" || ears_bottom == "YES") {
+	mickey_maze_bottom(radius, cblocks, rblocks, wall_thickness, face_bottom, ears_bottom);
 
-linear_extrude(wall_height + wall_thickness)
-    mickey_maze(radius, cblocks, rblocks, wall_thickness);
+	linear_extrude(wall_height + wall_thickness)
+		mickey_maze(radius, cblocks, rblocks, wall_thickness);
+} else {
+	linear_extrude(wall_height)
+		mickey_maze(radius, cblocks, rblocks, wall_thickness);
+}
