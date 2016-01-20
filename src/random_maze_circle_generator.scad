@@ -14,9 +14,10 @@ bottom = "YES";
 module circle_maze(radius, cblocks, rblocks, thickness = 1) {
     full_circle_angle = 360;
     arc_angle = full_circle_angle / cblocks;
-	length_rblock = radius / (rblocks + 2);
+	length_rblock = radius / rblocks ;
+	rows = rblocks - 2;
 	
-	maze = go_maze(1, 1, cblocks, rblocks, replace([rblocks, cblocks, 0, UP_RIGHT_WALL()], [rblocks, cblocks, 0, UP_WALL()], init_maze(cblocks, rblocks)));
+	maze = go_maze(1, 1, cblocks, rows, replace([rows, cblocks, 0, UP_RIGHT_WALL()], [rows, cblocks, 0, UP_WALL()], init_maze(cblocks, rows)));
 	
 	// inner circle
 	rotate([0, 0, 180]) 
@@ -43,6 +44,7 @@ module circle_maze(radius, cblocks, rblocks, thickness = 1) {
 		    rotate([0, 0, cc * arc_angle])
 		        arc(cr * length_rblock, [0, arc_angle + 0.01], thickness);
         } 
+		
 		if(v == 0 || v == 1) {
 		    r1 = length_rblock * 2;
 			r2 = cr * length_rblock;
