@@ -41,7 +41,7 @@ module circle_maze(radius, cblocks, rblocks, thickness = 1) {
         }
         if(v == 2 || v == 3) {
 		    rotate([0, 0, cc * arc_angle])
-		        arc(cr * length_rblock, [0, arc_angle], thickness);
+		        arc(cr * length_rblock, [0, arc_angle + 0.01], thickness);
         } 
 		if(v == 0 || v == 1) {
 		    r1 = length_rblock * 2;
@@ -52,13 +52,17 @@ module circle_maze(radius, cblocks, rblocks, thickness = 1) {
     }  	
 }
 
-if(bottom == "YES")	{
-	linear_extrude(wall_thickness)
-	    circle(radius + wall_thickness, $fn = 96);		
+if(bottom == "YES") {
+	linear_extrude(wall_height + wall_thickness) 
+		circle_maze(radius, cblocks, rblocks, wall_thickness);
+		
+	linear_extrude(wall_thickness) 
+		circle(radius, $fn = 96);
+} else {
+	linear_extrude(wall_height) 
+		circle_maze(radius, cblocks, rblocks, wall_thickness);
 }
-
-linear_extrude(wall_height + wall_thickness) 
-    circle_maze(radius, cblocks, rblocks, wall_thickness);
+	
 	
 
  
