@@ -42,3 +42,7 @@ OpenSCAD random maze generator
 - [random\_maze\_triangle_generator](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/random_maze_triangle_generator.md)
 
 ![Random Maze Triangle Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/ba/4f/f3/d8/d8/246771f25ce2e8b6a538b90cac99f9d0_preview_featured.jpg)
+
+- [random\_maze\_pyramid_generator](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/random_maze_pyramid_generator.md)
+
+![Random Maze Pyramid Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/4b/99/c5/34/5e/c12d1b0e6b5536a5e41db2beaddaa917_preview_featured.JPG)
