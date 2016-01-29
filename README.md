@@ -46,3 +46,7 @@ OpenSCAD random maze generator
 - [random\_maze\_pyramid_generator](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/random_maze_pyramid_generator.md)
 
 ![Random Maze Pyramid Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/4b/99/c5/34/5e/c12d1b0e6b5536a5e41db2beaddaa917_preview_featured.JPG)
+
+- [random\_maze\_gyro_generator](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/random_maze_gyro_generator.md)
+
+![Random Maze Gyro Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/b7/2f/f3/9a/52/ac43984895ec9ed930c645dc19fdeb55_preview_featured.jpg)
