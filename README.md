@@ -50,3 +50,7 @@ OpenSCAD random maze generator
 - [random\_maze\_gyro_generator](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/random_maze_gyro_generator.md)
 
 ![Random Maze Gyro Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/b7/2f/f3/9a/52/ac43984895ec9ed930c645dc19fdeb55_preview_featured.jpg)
+
+- [random\_maze\_heart_generator](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/random_maze_heart_generator.md)
+
+![Random Maze Heart Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/e8/e6/c5/5d/85/2f2bc72fc3149439ccabeb41bf9d5cd2_preview_featured.JPG)
