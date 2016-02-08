@@ -5,6 +5,7 @@ columns = 10;
 wall_thickness = 2;
 wall_height = 5;
 block_width = 5;
+bottom = YES;
 
 
 /*
@@ -199,3 +200,8 @@ function build_wall(i, j, n, rows, columns, maze_vector) =
 maze_vector = go_maze(1, 1, rows, columns, replace([columns, rows, 0, UP_RIGHT_WALL()], [columns, rows, 0, UP_WALL()], init_maze(rows, columns)));
 linear_extrude(wall_height) 
     maze(rows, columns, maze_vector, block_width, wall_thickness);
+	
+if(bottom == "YES") {
+    translate([-wall_thickness / 2, -wall_thickness / 2, -wall_thickness]) 
+	    linear_extrude(wall_thickness) square([block_width * columns + wall_thickness, block_width * rows + wall_thickness]);
+}	
