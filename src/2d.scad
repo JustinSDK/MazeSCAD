@@ -98,18 +98,12 @@ module solid_heart(radius) {
 
     translate([radius * cos(45), offset_h, 0]) rotate([0, 0, -45]) union() {
         sector(radius, [0, 180]);
-	    intersection() {
-	        translate([0, -radius, 0]) square(radius * 2, center = true);
-	        polygon(points = [[-radius, 0], [radius, 0], [radius, -2 * radius]]);
-	    }
+		translate([0, -radius, 0]) square(radius * 2, center = true);
 	}
 	
 	translate([-radius * cos(45), offset_h, 0]) rotate([0, 0, 45]) union() {
 	    sector(radius, [0, 180]);
-	    intersection() {
-	        translate([0, -radius, 0]) square(radius * 2, center = true);
-	        polygon(points = [[-radius, 0], [radius, 0], [-radius, -2 * radius]]);
-	    }
+		translate([0, -radius, 0]) square(radius * 2, center = true);
 	}
 }
 

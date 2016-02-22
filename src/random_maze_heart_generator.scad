@@ -59,7 +59,7 @@ module heart_maze(radius, cblocks, levels, height = 1, thickness = 1) {
 		
 		linear_extrude(height) union() {
 		    // maze entry
-		    #ring_heart_sector(r, 1.5 * arc_angle + 90, thickness);
+		    ring_heart_sector(r, 1.5 * arc_angle + 90, thickness);
 
 	        // road to the next level
 			for(i = [0:len(maze) - 1]) { 
@@ -84,7 +84,7 @@ if(bottom == "YES") {
 		    offset(delta = wall_thickness) 
 			    solid_heart(heart_height / 3.12);
 }
-
+ 
 if(ring == "YES") {
     if(bottom == "YES")  {
 	    translate([0, heart_height / 3.12 +  wall_thickness / 2, -wall_thickness / 2]) 
