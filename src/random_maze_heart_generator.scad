@@ -228,34 +228,6 @@ module sector(radius, angles) {
        }
 }
 
-// The heart is composed of two semi-circles and two isosceles triangles. 
-// The triangle's two equal sides have length equals to the double `radius` of the circle.
-// That's why the `solid_heart` module is drawn according a `radius` parameter.
-module solid_heart(radius, tip_factor) {
-    offset_h = 2.2360679774997896964091736687313 * radius / 2 - radius * sin(45);
-	tip_radius = radius / tip_factor;
-	
-    translate([radius * cos(45), offset_h, 0]) rotate([0, 0, -45])
-    hull() {
-        sector(radius, [0, 180]);
-		translate([radius - tip_radius, -radius * 2 + tip_radius, 0]) 
-		    circle(tip_radius, center = true, $fn = 48);
-	}
-	
-	translate([-radius * cos(45), offset_h, 0]) rotate([0, 0, 45]) hull() {
-        sector(radius, [0, 180]);
-		translate([-radius + tip_radius, -radius * 2 + tip_radius, 0]) 
-		    circle(tip_radius, center = true, $fn = 48);
-	}
-}
-
-module ring_heart(radius, tip_factor, thickness) {
-    difference() { 
-	    offset(delta = thickness) solid_heart(radius, tip_factor);
-        solid_heart(radius, tip_factor);
-	}
-}
-
 module ring_heart_sector(radius, angle, tip_factor, thickness) {
 	intersection() {
 		ring_heart(radius - 0.1, tip_factor, thickness + 0.2);
