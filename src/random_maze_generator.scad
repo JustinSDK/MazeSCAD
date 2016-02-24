@@ -5,7 +5,7 @@ columns = 10;
 wall_thickness = 2;
 wall_height = 5;
 block_width = 5;
-bottom = YES;
+bottom = "	YES";
 
 
 /*
@@ -120,19 +120,20 @@ function replace(v1, v2, vs, index = 0) =
     index == len(vs) ? vs : (
         vs[index] == v1 ? concat(concat(head_to(index, vs), [v2]), tail_from(index + 1, vs)) : replace(v1, v2, vs, index + 1)
     );
-    
+     
 /* 
  * functions for generating a maze vector
  *
  */
 
-// initialize rows of a maze
-function init_row(n, length) =
-    length == 0 ? [] : concat(init_row(n, length - 1), [[length, n, 0, UP_RIGHT_WALL()]]);
-    
+
 // initialize a maze
-function init_maze(rows, columns) =
-    rows == 0 ? [] : concat(init_maze(rows - 1, columns), init_row(rows, columns));
+function init_maze(rows, columns) = 
+    [
+	    for(c = [1 : columns]) 
+	        for(r = [1 : rows]) 
+		        [c, r, 0,  UP_RIGHT_WALL()]
+	];
     
 // find a vector in the maze vector
 function find(i, j, maze_vector, index = 0) =
@@ -192,7 +193,9 @@ function build_wall(i, j, n, rows, columns, maze_vector) =
             ) 
         )
     ); 
- 
+
+echo(init_maze(rows, columns));	
+
 /*
  * create a maze
  *
