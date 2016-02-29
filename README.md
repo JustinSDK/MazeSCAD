@@ -54,3 +54,7 @@ OpenSCAD random maze generator
 - [random\_maze\_heart_generator](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/random_maze_heart_generator.md)
 
 ![Random Maze Heart Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/e8/e6/c5/5d/85/2f2bc72fc3149439ccabeb41bf9d5cd2_preview_featured.JPG)
+
+- [random\_3d\_maze\_heart_generator](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/random_3d_maze_heart_generator.md)
+
+![Random 3D Maze Heart Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/07/b8/51/39/40/861c9964ae622d7e548527c868922a68_preview_featured.jpg)
