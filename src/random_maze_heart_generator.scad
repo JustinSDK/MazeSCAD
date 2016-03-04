@@ -162,10 +162,10 @@ function build_wall(i, j, n, rows, columns, maze_vector) =
         )
     ); 
 
-module ring_heart_sector(radius, angle, tip_factor, thickness) {
+module ring_heart_sector(radius, angle, tip_factor, thickness, width) {
 	intersection() {
 		ring_heart(radius - 0.1, tip_factor, thickness + 0.2);
-		rotate([0, 0, angle]) x_line([0, 0], radius * 3, thickness);
+		rotate([0, 0, angle]) x_line([0, 0], radius * 3, width);
 	}
 }
 
@@ -212,7 +212,7 @@ module heart_maze(radius, cblocks, levels, tip_factor, height = 1, thickness = 1
 		
 		linear_extrude(height) union() {
 		    // maze entry
-		    ring_heart_sector(r, 1.5 * arc_angle + 90, tip_factor, thickness);
+		    ring_heart_sector(r, 1.5 * arc_angle + 90, tip_factor, thickness, r - thickness / 2);
 
 	        // road to the next level
 			for(i = [0:len(maze) - 1]) { 
@@ -222,7 +222,7 @@ module heart_maze(radius, cblocks, levels, tip_factor, height = 1, thickness = 1
 				v = cord[3];
 				
 				if(v == 0 || v == 1) {
-					ring_heart_sector(r * (cr + 1), (cc + 0.5) * arc_angle + 90, tip_factor, thickness);
+					ring_heart_sector(r * (cr + 1), (cc + 0.5) * arc_angle + 90, tip_factor, thickness, r - thickness / 2);
 				}  
 			}
 		}
