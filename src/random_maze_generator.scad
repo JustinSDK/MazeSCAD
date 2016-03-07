@@ -194,8 +194,6 @@ function build_wall(i, j, n, rows, columns, maze_vector) =
         )
     ); 
 
-echo(init_maze(rows, columns));	
-
 /*
  * create a maze
  *
