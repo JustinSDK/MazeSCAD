@@ -101,24 +101,9 @@ function not_visited(cord, vs, index = 0) =
 function rand_dirs() =
     PERMUTATION_OF_FOUR()[round(rands(0, 24, 1)[0])]; 
 
-// give a index (exclusivly), slice a vector 
-
-function head_to(i, vs) = i == 0 ? [] : [for(i = [0 : i - 1]) vs[i]];
-
-// give a index (exclusivly), slice a vector 
-function tail_from(i, vs, index = 0, new_vs = []) =
-    i >= len(vs) ? [] : (
-        index < i ? tail_from(i, vs, index + 1) : (
-            index < len(vs) ? tail_from(i, vs, index + 1, concat(new_vs, [vs[index]])) : new_vs
-        )
-    );
-
-// replace v1 in the vector with v2 
-function replace(v1, v2, vs, index = 0) =
-    index == len(vs) ? vs : (
-        vs[index] == v1 ? concat(concat(head_to(index, vs), [v2]), tail_from(index + 1, vs)) : replace(v1, v2, vs, index + 1)
-    );
-     
+function replace(v1, v2, vs) =
+    [for(i = [0:len(vs) - 1]) vs[i] == v1 ? v2 : vs[i]];
+	 
 /* 
  * functions for generating a maze vector
  *
