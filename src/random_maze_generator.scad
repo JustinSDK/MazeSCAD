@@ -101,6 +101,7 @@ function not_visited(cord, vs, index = 0) =
 function rand_dirs() =
     PERMUTATION_OF_FOUR()[round(rands(0, 24, 1)[0])]; 
 
+// replace v1 in the vector with v2 
 function replace(v1, v2, vs) =
     [for(i = [0:len(vs) - 1]) vs[i] == v1 ? v2 : vs[i]];
 	 
