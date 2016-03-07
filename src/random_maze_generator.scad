@@ -102,10 +102,8 @@ function rand_dirs() =
     PERMUTATION_OF_FOUR()[round(rands(0, 24, 1)[0])]; 
 
 // give a index (exclusivly), slice a vector 
-function head_to(i, vs) =
-    i >= len(vs) ? vs : (
-        i == 0 ? [] : concat(head_to(i - 1, vs), [vs[i - 1]])
-    );
+
+function head_to(i, vs) = i == 0 ? [] : [for(i = [0 : i - 1]) vs[i]];
 
 // give a index (exclusivly), slice a vector 
 function tail_from(i, vs, index = 0, new_vs = []) =
