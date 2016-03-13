@@ -62,3 +62,8 @@ OpenSCAD random maze generator
 - [random\_heart\_to\_heart_generator](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/random_heart_to_heart_generator.md)
 
 ![Random Heart to Heart Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/2f/75/e1/cf/8a/6aa901d9f7f15a83b0daf588ca4952fa_preview_featured.jpg)
+
+- [random\_maze\_regular\_polygon_generator](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/random_maze_regular_polygon_generator.md)
+
+![Random Maze Regular Polygon Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/d9/c7/80/ab/75/d3165965adddf53bcc0dff356ffdb60f_preview_featured.JPG)
+
