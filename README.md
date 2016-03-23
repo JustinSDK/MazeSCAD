@@ -67,3 +67,6 @@ OpenSCAD random maze generator
 
 ![Random Maze Regular Polygon Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/d9/c7/80/ab/75/d3165965adddf53bcc0dff356ffdb60f_preview_featured.JPG)
 
+- [maze\_puzzle_taiwan](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/maze_puzzle_taiwan.md)
+
+![Maze and Puzzle: Taiwan](http://thingiverse-production-new.s3.amazonaws.com/renders/f4/76/38/e4/b1/37f733f7d20e0a869ef7e66e7b5066d1_preview_featured.jpg)
