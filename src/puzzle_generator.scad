@@ -9,9 +9,10 @@ spacing = 0.4;
 // Parameters: 
 //     side_length - the length of the piece.
 //     spacing - a small space between pieces to avoid overlaping while printing.
-module puzzle_piece(side_length, spacing) {
+//     same_side - whether the piece has the same side.
+module puzzle_piece(side_length, spacing, same_side = true) {
 	$fn = 48;
-	
+
 	circle_radius = side_length / 10;
 	half_circle_radius = circle_radius / 2;
 	side_length_div_4 = side_length / 4;
@@ -27,10 +28,16 @@ module puzzle_piece(side_length, spacing) {
 			circle(circle_radius);
 			
 		// top
-		translate([side_length_div_4, side_length - half_circle_radius, 0]) 
-			circle(circle_radius);
-		translate([side_length_div_4 * 3, side_length - half_circle_radius, 0]) 
-			circle(circle_radius);		
+		if(same_side) {
+			translate([side_length_div_4, side_length - half_circle_radius, 0]) 
+				circle(circle_radius);
+		
+			translate([side_length_div_4 * 3, side_length - half_circle_radius, 0]) 
+				circle(circle_radius);		
+		} else {
+			translate([side_length_div_4 * 2, side_length - half_circle_radius, 0]) 
+				circle(circle_radius * 1.5);
+		}
 	}
 
 	// right
@@ -40,10 +47,15 @@ module puzzle_piece(side_length, spacing) {
 		circle(bulge_circle_radius);
 
 	// bottom
-	translate([side_length_div_4, -half_circle_radius, 0]) 
-		circle(bulge_circle_radius);
-	translate([side_length_div_4 * 3, -half_circle_radius, 0]) 
-		circle(bulge_circle_radius);
+	if(same_side) {
+		translate([side_length_div_4, -half_circle_radius, 0]) 
+			circle(bulge_circle_radius);
+		translate([side_length_div_4 * 3, -half_circle_radius, 0]) 
+			circle(bulge_circle_radius);
+	} else {
+		translate([side_length_div_4 * 2, -half_circle_radius, 0]) 
+			circle(bulge_circle_radius * 1.5);	
+	}
 }
 
 // Create a puzzle.
