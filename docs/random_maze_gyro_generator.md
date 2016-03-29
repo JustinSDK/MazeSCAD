@@ -16,6 +16,4 @@ You may roll it on 720 degrees. This may resemble new mazes on both sides. It al
 
 To avoid overlapping between rings, you may try different values of the `spacing` parameter. The 0.6 mm `spacing` is suitable for my printer with 0.2 mm layer height and 0.6 mm Bottom/Top thickness. Although 0.6 mm `spacing` seems suitable for most situations, I think it's different for different 3DP, filaments and settings. That's why I makes  the `spacing` parameter changeable. 
 
-Give it a try:
-
-http://www.thingiverse.com/apps/customizer/run?thing_id=1282585
+![Random Maze Gyro Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/b7/2f/f3/9a/52/ac43984895ec9ed930c645dc19fdeb55_preview_featured.jpg)

@@ -11,5 +11,4 @@ You may change the following parameters to generate a maze container, a differen
 - `vertical_blocks`
 - `horizontal_blocks` 
 
-Give it a try:
-[http://www.thingiverse.com/apps/customizer/run?thing_id=1229469](http://www.thingiverse.com/apps/customizer/run?thing_id=1229469)
+![Random Maze Container Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/a0/ee/c5/e2/cc/7f2e204c4a3f6e92d24e831b2f8fbc72_preview_featured.jpg)

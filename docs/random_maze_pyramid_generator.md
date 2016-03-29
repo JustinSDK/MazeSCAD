@@ -9,6 +9,5 @@ This is a random maze pyramid generator. It's based on [Random maze triangle gen
 - `levels`
 - `ring`
 
-Give it a try:
 
-http://www.thingiverse.com/apps/customizer/run?thing_id=1275727
+![Random Maze Pyramid Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/4b/99/c5/34/5e/c12d1b0e6b5536a5e41db2beaddaa917_preview_featured.JPG)

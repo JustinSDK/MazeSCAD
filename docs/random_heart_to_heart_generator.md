@@ -15,6 +15,4 @@ This is a random heart to heart maze generator. It's based on [Random maze heart
 - `spacing`
 - `ring`
 
-Give it a try:
-
-http://www.thingiverse.com/apps/customizer/run?thing_id=1391809
+![Random Heart to Heart Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/2f/75/e1/cf/8a/6aa901d9f7f15a83b0daf588ca4952fa_preview_featured.jpg)

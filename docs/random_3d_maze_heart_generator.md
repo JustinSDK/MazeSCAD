@@ -12,6 +12,4 @@ This is a random 3D maze heart generator. It's based on [Random maze heart gener
 - `maze_wall_thickness`
 - `ring`
 
-Give it a try:
-
-http://www.thingiverse.com/apps/customizer/run?thing_id=1378192
+![Random 3D Maze Heart Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/bc/af/12/07/71/861c9964ae622d7e548527c868922a68_preview_featured.jpg)

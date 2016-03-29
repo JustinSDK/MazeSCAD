@@ -8,6 +8,5 @@ This is based on [Random maze generator, pure OpenSCAD](https://www.thingiverse.
 
 I call it as an easy style pyramid because it just `linear_extrude` the generated maze and `intersection` a `cylinder` with `$fn=4`. Easy but look not bad...XD
 
-Give it a try:
+![Random Maze Pyramid Generator - Easy Style](http://thingiverse-production-new.s3.amazonaws.com/renders/a3/d2/26/35/d7/f2592d60a85cf4df6b9fadb89da4abba_preview_featured.jpg)
 
-http://www.thingiverse.com/apps/customizer/run?thing_id=1269336

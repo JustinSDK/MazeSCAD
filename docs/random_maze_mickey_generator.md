@@ -10,7 +10,4 @@ This is based on [Random maze circle generator](https://www.thingiverse.com/thin
 - `face_bottom`
 - `ears_bottom`
 
-Give it a try:
-
-http://www.thingiverse.com/apps/customizer/run?thing_id=1257545
-
+![Random Maze Mickey Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/56/40/3d/9e/43/682c3e1d94b3ed437cc03e9bb6e64bbf_preview_featured.jpg)

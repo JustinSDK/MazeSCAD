@@ -10,5 +10,4 @@ This is a random maze heart generator. It's based on [Random maze generator, pur
 - `bottom`
 - `ring`
 
-Give it a try:
-http://www.thingiverse.com/apps/customizer/run?thing_id=1319161
+![Random Maze Heart Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/e8/e6/c5/5d/85/2f2bc72fc3149439ccabeb41bf9d5cd2_preview_featured.JPG)

@@ -8,5 +8,4 @@ This is a random maze triangle generator. It's based on [Random maze generator, 
 - `cblocks`  
 - `levels`
 
-Give it a try:
-http://www.thingiverse.com/apps/customizer/run?thing_id=1272104
+![Random Maze Triangle Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/ba/4f/f3/d8/d8/246771f25ce2e8b6a538b90cac99f9d0_preview_featured.jpg)

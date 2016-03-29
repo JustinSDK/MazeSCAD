@@ -13,3 +13,5 @@ Parameters:
 - `spacing`
 
 The size of Taiwan is 100 x 150. In other words, it has a ratio of 2:3. In order to generate a maze or a puzzle which matches Taiwan, the value of  `maze_x_blocks` or `puzzle_x_blocks` should be a multiple of 2. 
+
+![Maze and Puzzle: Taiwan](http://thingiverse-production-new.s3.amazonaws.com/renders/f4/76/38/e4/b1/37f733f7d20e0a869ef7e66e7b5066d1_preview_featured.jpg)

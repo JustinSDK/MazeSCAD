@@ -9,6 +9,4 @@ This is a random maze circle generator. It's based on [Random maze generator, pu
 - `rblocks`
 - `bottom`
 
-Give it a try:
-
-http://www.thingiverse.com/apps/customizer/run?thing_id=1255574
+![Random Maze Circle Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/fb/ce/ea/33/c9/ffefaea7573daa979cfd44a6ac2aea69_preview_featured.jpg)
