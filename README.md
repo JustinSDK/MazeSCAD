@@ -18,3 +18,4 @@ OpenSCAD random maze generator
 - [random\_heart\_to\_heart_generator](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/random_heart_to_heart_generator.md)
 - [random\_maze\_regular\_polygon_generator](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/random_maze_regular_polygon_generator.md)
 - [maze\_puzzle_taiwan](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/maze_puzzle_taiwan.md)
+- [image\_to\_maze_puzzle](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/image_to_maze_puzzle.md)
