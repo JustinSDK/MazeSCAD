@@ -19,3 +19,4 @@ OpenSCAD random maze generator
 - [random\_maze\_regular\_polygon_generator](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/random_maze_regular_polygon_generator.md)
 - [maze\_puzzle_taiwan](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/maze_puzzle_taiwan.md)
 - [image\_to\_maze_puzzle](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/image_to_maze_puzzle.md)
+- [composable_maze](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/composable_maze.md)
