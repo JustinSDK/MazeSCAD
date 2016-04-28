@@ -436,7 +436,7 @@ module hexagon_maze_for_soccer_polyhedron(height) {
 	regular_polygon_maze(radius_of_circle_wrapper, cblocks, levels, wall_thickness, sides);	
 }
 
-module maze_soccer(height, maze_in) {
+module maze_soccer_polyhedron(height, maze_in) {
     spacing = 1;
 	
 	sphere(height / 2 - 1); 
@@ -459,4 +459,4 @@ module maze_soccer(height, maze_in) {
 	} 
 }
 
-maze_soccer(height, maze_in);
+maze_soccer_polyhedron(height, maze_in);
