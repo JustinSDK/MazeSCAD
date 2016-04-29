@@ -21,3 +21,4 @@ OpenSCAD random maze generator
 - [image\_to\_maze_puzzle](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/image_to_maze_puzzle.md)
 - [composable_maze](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/composable_maze.md)
 - [maze_soccer_polyhedron](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/maze_soccer_polyhedron.md)
+- [maze_soccer](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/maze_soccer.md)
