@@ -60,7 +60,7 @@ module sector(radius, angles, fn = 24) {
 	step = -360 / fn;
 
 	points = concat([[0, 0]],
-		[for(a = [angles[0] : step : angles[1] - 360 + step]) 
+		[for(a = [angles[0] : step : angles[1] - 360]) 
 			[r * cos(a), r * sin(a)]
 		],
 		[[r * cos(angles[1]), r * sin(angles[1])]]
