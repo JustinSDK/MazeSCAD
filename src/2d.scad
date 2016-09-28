@@ -57,13 +57,18 @@ module a_quarter_sector(radius, angle) {
 module sector(radius, angles, fn = 24) {
     d = radius - radius * cos(180 / fn);
 	r = (radius + d) / cos(180 / fn);
+	step = -360 / fn;
 
+	points = concat([[0, 0]],
+		[for(a = [angles[0] : step : angles[1] - 360 + step]) 
+			[r * cos(a), r * sin(a)]
+		],
+		[[r * cos(angles[1]), r * sin(angles[1])]]
+	);
+	
 	difference() {
 	    circle(radius, $fn = fn);
-		points = [for(a = [angles[0] : -360 / fn : angles[1] - 360]) 
-		    [r * cos(a), r * sin(a)]
-		];
-		polygon(concat([[0, 0]], points));
+		polygon(points);
 	}
 }
 
