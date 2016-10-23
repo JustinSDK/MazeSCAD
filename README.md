@@ -23,3 +23,4 @@ OpenSCAD random maze generator
 - [maze_soccer_polyhedron](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/maze_soccer_polyhedron.md)
 - [maze_soccer](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/maze_soccer.md)
 - [Moving maze bracelet](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/moving_maze_bracelet.md)
+- [Hex maze generator](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/hex_maze_generator.md)
