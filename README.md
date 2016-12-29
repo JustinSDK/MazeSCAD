@@ -24,5 +24,8 @@ OpenSCAD random maze generator
 - [maze_soccer](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/maze_soccer.md)
 - [Moving maze bracelet](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/moving_maze_bracelet.md)
 - [Hex maze generator](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/hex_maze_generator.md)
-- [Hex maze pyramid](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/hex_maze_pyramid.md.md)
+- [Hex maze pyramid](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/hex_maze_pyramid.md)
+- [Pyramidal staircase maze](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/pyramidal_staircase_maze.md)
+
+
 
