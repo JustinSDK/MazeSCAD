@@ -27,5 +27,7 @@ OpenSCAD random maze generator
 - [Hex maze pyramid](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/hex_maze_pyramid.md)
 - [Pyramidal staircase maze](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/pyramidal_staircase_maze.md)
 - [Stereographic projection maze](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/stereographic_projection_maze.md)
+- [Stereographic projection maze - prototype](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/stereographic_projection_maze2.md)
+
 
 
