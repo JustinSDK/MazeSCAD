@@ -33,5 +33,4 @@ OpenSCAD random maze generator
 - [Stereographic projection maze](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/stereographic_projection_maze.md)
 - [Stereographic projection maze - prototype](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/stereographic_projection_maze2.md)
 - [Stereographic projection maze ||](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/stereographic_projection_maze2-improved.md)
-
-
+- [Hex maze projection](https://github.com/JustinSDK/MazeSCAD/blob/master/docs/hex_maze_stereographic_projection.md)
