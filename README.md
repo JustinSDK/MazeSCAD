@@ -1,3 +1,5 @@
+This repo has evolved into a part of [dotSCAD](https://github.com/JustinSDK/dotSCAD).
+
 - *[OpenSCAD Documentation - Traditional Chinese](http://openhome.cc/Gossip/OpenSCAD/)*
 - *[OpenSCAD Documentation - English](http://openhome.cc/eGossip/OpenSCAD/)*
 
